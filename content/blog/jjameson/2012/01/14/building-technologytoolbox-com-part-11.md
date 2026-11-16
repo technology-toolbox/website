@@ -22,11 +22,11 @@ Toolbox home page uses a CSS sprite to render the arrow image next to each list
 item.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-538x600.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Home-538x600.png"
 alt="Technology Toolbox home page" class="screenshot" height="600" width="538"
 caption="Figure 1: Technology Toolbox home page" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-1058x1179.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Home-1058x1179.png)
 
 If you use Firebug to inspect one of the list items in the **Most Popular
 Posts** section, you'll notice the CSS `background` property is set to:
@@ -49,7 +49,7 @@ The "list item sprite" image is actually a 400x400 composite of multiple icons
 used throughout the site.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/list-item-sprites-1.0-400x400.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/list-item-sprites-1.0-400x400.png"
 alt="list-item-sprites-1.0.png" class="screenshot" height="400" width="400"
 caption="Figure 2: list-item-sprite-1.0.png" >}}
 
@@ -147,11 +147,11 @@ image) to quickly determine where to place the icons within the overall image.
 for each cell in the grid -- or you can simply take my word for it :-) ]
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/list-items-sprite-design-600x377.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/list-items-sprite-design-600x377.png"
 alt="List items sprite (Expression Design)" class="screenshot" height="377"
 width="600" caption="Figure 3: List items sprite (Expression Design)" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/list-items-sprite-design-1594x1001.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/list-items-sprite-design-1594x1001.png)
 
 ### What happens when someone needs to add a new list item icon?
 
@@ -183,11 +183,11 @@ Take a look at the **Archives** section displayed on the various blog pages in
 the site, such as the one shown in Figure 4.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-374x600.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-374x600.png"
 alt="Blog home page" class="screenshot" height="600" width="374"
 caption="Figure 4: Blog home page" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-1058x1699.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-1058x1699.png)
 
 Notice the use of the "plus" icon from the sprite shown in Figure 2. If you
 click one of the years, the item expands to show the months within that year

@@ -24,11 +24,11 @@ as a reference. However, I quickly dismissed that option after viewing my MSDN
 blog home page with CSS disabled.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/MSDN-blog-home-CSS-disabled-328x600.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/MSDN-blog-home-CSS-disabled-328x600.png"
 alt="My MSDN blog home - CSS disabled" class="screenshot" height="600"
 width="328" caption="Figure 1: My MSDN blog home - CSS disabled" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/MSDN-blog-home-CSS-disabled-989x1810.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/MSDN-blog-home-CSS-disabled-989x1810.png)
 
 One of the most important concepts I learned a few years ago while reading
 [Transcending CSS](http://www.transcendingcss.com/) is that your HTML content
@@ -60,12 +60,12 @@ Compare Figure 1 with the corresponding "naked" version of my new blog home
 page:
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-CSS-disabled-362x600.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-CSS-disabled-362x600.png"
 alt="Technology Toolbox blog home page - CSS disabled" class="screenshot"
 height="600" width="362"
 caption="Figure 2: Technology Toolbox blog home page - CSS disabled" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-CSS-disabled-989x1640.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-CSS-disabled-989x1640.png)
 
 Notice how much easier it is to identify the different sections of the page --
 thanks to the use of HTML heading elements (which were almost nonexistent on my
@@ -260,11 +260,11 @@ additional class to the list item to indicate that a particular post has no
 comments (i.e. `<li class="comments none">`).
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-374x600.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-374x600.png"
 alt="Blog home page" class="screenshot" height="600" width="374"
 caption="Figure 3: Blog home page" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-1058x1699.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-1058x1699.png)
 
 ### HTML markup for individual blog post
 

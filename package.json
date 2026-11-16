@@ -1,7 +1,7 @@
 {
   "name": "technology-toolbox-website",
   "version": "1.0.0",
-  "description": "Technology Toolbox website (https://www.technologytoolbox.com)",
+  "description": "Technology Toolbox website (https://www.techtoolbox.us)",
   "main": "index.html",
   "dependencies": {},
   "devDependencies": {

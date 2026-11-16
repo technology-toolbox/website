@@ -24,11 +24,11 @@ Office SharePoint Server (MOSS) 2007.
 I also provided a sample AJAX Web Part, illustrated in the following screenshot:
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/AJAX-in-SharePoint-600x417.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/AJAX-in-SharePoint-600x417.png"
 alt="AJAX in SharePoint" class="screenshot" height="417" width="600"
 caption="Figure 1: AJAX in SharePoint" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/AJAX-in-SharePoint-989x688.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/AJAX-in-SharePoint-989x688.png)
 
 Assuming you are familiar with the
 **[UpdatePanel](http://msdn.microsoft.com/en-us/library/system.web.ui.updatepanel.aspx)**

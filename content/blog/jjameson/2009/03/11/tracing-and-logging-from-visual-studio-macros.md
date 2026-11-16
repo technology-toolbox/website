@@ -29,11 +29,11 @@ there is an item in the **Show output from** dropdown list titled **Macros**
 (a.k.a. "the macro output pane").
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Macro-Output-Pane-600x239.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Macro-Output-Pane-600x239.png"
 alt="Macro output pane" class="screenshot" height="239" width="600"
 caption="Figure 1: Macro output pane" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Macro-Output-Pane-686x273.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/Macro-Output-Pane-686x273.png)
 
 Chances are that when you look at your Visual Studio environment, you won't see
 this item. So, why does it appear in my environment?

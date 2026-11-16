@@ -37,12 +37,12 @@ The following figure shows the physical architecture of the various computers
 and network devices that comprise the "Jameson Datacenter":
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Jameson-Datacenter-2009-09-13-600x493.jpg"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Infrastructure/Jameson-Datacenter-2009-09-13-600x493.jpg"
 alt="The \"Jameson Datacenter\" - physical architecture" height="493"
 width="600"
 caption="Figure 1: The \"Jameson Datacenter\" - physical architecture" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Jameson-Datacenter-2009-09-13-909x747.jpg)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Infrastructure/Jameson-Datacenter-2009-09-13-909x747.jpg)
 
 Note that I'm not suggesting development teams require a Windows Media Center or
 an Xbox 360 (which doubles as a Media Center Extender) -- I merely included
@@ -53,17 +53,17 @@ dramatically, contrary to what you might predict ;-)]
 
 If you've followed this blog for any significant length of time, you already
 know that I'm a
-[big fan of virtualization](/blog/jjameson/tags/Virtualization/default.aspx).
+[big fan of virtualization](/tags/virtualization/).
 Notice that I dedicate two servers specifically to running Hyper-V virtual
 machines (VMs). The following figure illustrates the various servers (both
 logical and physical) that typically run 24x7 in my lab:
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Jameson-Datacenter-Logical-(2009-09-13)-600x370.jpg"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Infrastructure/Jameson-Datacenter-Logical-(2009-09-13)-600x370.jpg"
 alt="The \"Jameson Datacenter\" - logical architecture" height="370" width="600"
 caption="Figure 2: The \"Jameson Datacenter\" - logical architecture" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Jameson-Datacenter-Logical-%282009-09-13%29-995x614.jpg)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Infrastructure/Jameson-Datacenter-Logical-%282009-09-13%29-995x614.jpg)
 
 I should also point out that these aren't true enterprise servers -- meaning
 that they don't have redundant power supplies, remote management cards, etc.
@@ -192,12 +192,12 @@ The following figure provides more detail on the hardware configuration of the
 various servers:
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Jameson-Datacenter-Hardware-(2009-09-13)-600x454.jpg"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Infrastructure/Jameson-Datacenter-Hardware-(2009-09-13)-600x454.jpg"
 alt="The \"Jameson Datacenter\" - hardware configuration" height="454"
 width="600"
 caption="Figure 2: The \"Jameson Datacenter\" - hardware configuration" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Jameson-Datacenter-Hardware-%282009-09-13%29-890x674.jpg)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Infrastructure/Jameson-Datacenter-Hardware-%282009-09-13%29-890x674.jpg)
 
 Since BEAST is essentially my "production" SQL Server instance, I chose to
 configure all four disks in a RAID 10 (1+0) configuration. Ideally, I'd throw

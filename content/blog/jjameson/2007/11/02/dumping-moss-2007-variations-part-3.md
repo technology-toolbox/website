@@ -72,11 +72,11 @@ shows the elapsed time required to propagate each FAQ page from the source
 **zh-TW**).
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Variation-Page-Propagation-(before)-600x436.jpg"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/Variation-Page-Propagation-(before)-600x436.jpg"
 alt="Elapsed Time for Variation Page Propagation" height="436" width="600"
 caption="Figure 1: Elapsed Time for Variation Page Propagation" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Variation-Page-Propagation-%28before%29-704x512.jpg)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/Variation-Page-Propagation-%28before%29-704x512.jpg)
 
 Notice how the time required to propagate each page increases substantially as
 the number of pages increases. As I pointed out in
@@ -92,12 +92,12 @@ the remaining 959 pages after the index was added.
 The following graph "zooms in" on the time period after the index was added.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Variation-Page-Propagation-(after)-600x436.jpg"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/Variation-Page-Propagation-(after)-600x436.jpg"
 alt="Elapsed Time for Variation Page Propagation with New AllUserData Index"
 height="436" width="600"
 caption="Figure 2: Elapsed Time for Variation Page Propagation with New AllUserData Index" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Variation-Page-Propagation-%28after%29-670x487.jpg)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/Variation-Page-Propagation-%28after%29-670x487.jpg)
 
 It seems like it took SQL Server a little while to optimize based on the new
 index, but it levels out around 40 seconds per page. Compared with the 10-minute

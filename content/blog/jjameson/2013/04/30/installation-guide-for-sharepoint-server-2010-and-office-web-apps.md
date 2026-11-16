@@ -247,11 +247,11 @@ to save significant time. For information on creating and using Sysprep'ed
 images for virtual machines, refer to the following blog posts:
 
 - {{< reference title="Creating a VM/VHD Library"
-  linkHref="/blog/jjameson/2010/04/02/creating-a-vm-vhd-library"
-  linkText="https://www.technologytoolbox.com/blog/jjameson/2010/04/02/creating-a-vm-vhd-library" >}}
+  linkHref="/blog/jjameson/2010/04/02/creating-a-vm-vhd-library/"
+  linkText="https://www.techtoolbox.us/blog/jjameson/2010/04/02/creating-a-vm-vhd-library/" >}}
 - {{< reference title="Using Sysprep'ed VHDs for New Hyper-V Virtual Machines"
-  linkHref="/blog/jjameson/2009/08/13/using-sysprep-ed-vhds-for-new-hyper-v-virtual-machines"
-  linkText="https://www.technologytoolbox.com/blog/jjameson/2009/08/13/using-sysprep-ed-vhds-for-new-hyper-v-virtual-machines" >}}
+  linkHref="/blog/jjameson/2009/08/13/using-sysprep-ed-vhds-for-new-hyper-v-virtual-machines/"
+  linkText="https://www.techtoolbox.us/blog/jjameson/2009/08/13/using-sysprep-ed-vhds-for-new-hyper-v-virtual-machines/" >}}
 
 ### Reset WSUS configuration
 
@@ -278,7 +278,7 @@ To resolve the issue, remove the WSUS registry entries specified in
 
 More information on this step is available in the following blog post:
 
-{{< reference title="Script to Reset WSUS for Sysprep'ed Image" linkHref="/blog/jjameson/2011/04/25/script-to-reset-wsus-for-sysprep-ed-image" linkText="https://www.technologytoolbox.com/blog/jjameson/2011/04/25/script-to-reset-wsus-for-sysprep-ed-image" >}}
+{{< reference title="Script to Reset WSUS for Sysprep'ed Image" linkHref="/blog/jjameson/2011/04/25/script-to-reset-wsus-for-sysprep-ed-image/" linkText="https://www.techtoolbox.us/blog/jjameson/2011/04/25/script-to-reset-wsus-for-sysprep-ed-image/" >}}
 
 ### Remove "stale" network adapters
 
@@ -314,7 +314,7 @@ To cleanup the network adapters:
 
 More information on this step is available in the following blog post:
 
-{{< reference title="Removing \"Stale\" Network Adapters in Hyper-V VM" linkHref="/blog/jjameson/2011/03/14/removing-quot-stale-quot-network-adapters-in-hyper-v-vm" linkText="https://www.technologytoolbox.com/blog/jjameson/2011/03/14/removing-quot-stale-quot-network-adapters-in-hyper-v-vm" >}}
+{{< reference title="Removing \"Stale\" Network Adapters in Hyper-V VM" linkHref="/blog/jjameson/2011/03/14/removing-quot-stale-quot-network-adapters-in-hyper-v-vm/" linkText="https://www.techtoolbox.us/blog/jjameson/2011/03/14/removing-quot-stale-quot-network-adapters-in-hyper-v-vm/" >}}
 
 ## DEV - Configure VM storage
 
@@ -328,9 +328,9 @@ contention.
 
 {{< anchor name="Figure_1:_SharePoint_development_VM_configuration" >}}
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/SharePoint-Development-VM-600x317.png" alt="Figure 1: SharePoint development VM configuration" class="screenshot" height="317" width="600" caption="Figure 1: SharePoint development VM configuration" >}}
+{{< figure src="https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/SharePoint-Development-VM-600x317.png" alt="Figure 1: SharePoint development VM configuration" class="screenshot" height="317" width="600" caption="Figure 1: SharePoint development VM configuration" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/SharePoint-Development-VM-793x419.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/SharePoint-Development-VM-793x419.png)
 
 {{< div-block "note" >}}
 
@@ -365,7 +365,7 @@ To create a 500 MB VHD for the SQL Server log files:
 
 More information on this step is available in the following blog post:
 
-{{< reference title="Creating Small VHDs (< 1GB) for Hyper-V" linkHref="/blog/jjameson/2011/03/19/creating-small-vhds-lt-1gb-for-hyper-v" linkText="https://www.technologytoolbox.com/blog/jjameson/2011/03/19/creating-small-vhds-lt-1gb-for-hyper-v" >}}
+{{< reference title="Creating Small VHDs (< 1GB) for Hyper-V" linkHref="/blog/jjameson/2011/03/19/creating-small-vhds-lt-1gb-for-hyper-v/" linkText="https://www.techtoolbox.us/blog/jjameson/2011/03/19/creating-small-vhds-lt-1gb-for-hyper-v/" >}}
 
 ## Set MaxPatchCacheSize to 0 (Optional)
 
@@ -384,7 +384,7 @@ To configure the MaxPatchCacheSize policy:
 
 More information on this step is available in the following blog post:
 
-{{< reference title="Save Significant Disk Space by Setting MaxPatchCacheSize to 0" linkHref="/blog/jjameson/2010/04/30/save-significant-disk-space-by-setting-maxpatchcachesize-to-0" linkText="https://www.technologytoolbox.com/blog/jjameson/2010/04/30/save-significant-disk-space-by-setting-maxpatchcachesize-to-0" >}}
+{{< reference title="Save Significant Disk Space by Setting MaxPatchCacheSize to 0" linkHref="/blog/jjameson/2010/04/30/save-significant-disk-space-by-setting-maxpatchcachesize-to-0/" linkText="https://www.techtoolbox.us/blog/jjameson/2010/04/30/save-significant-disk-space-by-setting-maxpatchcachesize-to-0/" >}}
 
 ## Disable Internet Protocol version 6 (TCP/IPv6)
 
@@ -794,7 +794,7 @@ END
 
 More information on this step is available in the following blog post:
 
-{{< reference title="Using the Simple Recovery Model for SharePoint Development Environments" linkHref="/blog/jjameson/2011/03/19/using-the-simple-recovery-model-for-sharepoint-development-environments" linkText="https://www.technologytoolbox.com/blog/jjameson/2011/03/19/using-the-simple-recovery-model-for-sharepoint-development-environments" >}}
+{{< reference title="Using the Simple Recovery Model for SharePoint Development Environments" linkHref="/blog/jjameson/2011/03/19/using-the-simple-recovery-model-for-sharepoint-development-environments/" linkText="https://www.techtoolbox.us/blog/jjameson/2011/03/19/using-the-simple-recovery-model-for-sharepoint-development-environments/" >}}
 
 ## DEV - Install Microsoft Office 2010
 
@@ -1075,7 +1075,7 @@ To add the Central Administration site to the Local intranet zone:
 
 More information on this step is available in the following blog post:
 
-{{< reference title="Be \"In the Zone\" to Avoid Entering Credentials" linkHref="/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials" linkText="https://www.technologytoolbox.com/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials" >}}
+{{< reference title="Be \"In the Zone\" to Avoid Entering Credentials" linkHref="/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials/" linkText="https://www.techtoolbox.us/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials/" >}}
 
 ## Add the URL for the extranet website to the Local intranet zone
 
@@ -1166,7 +1166,7 @@ To configure permissions for the IIS WAMREG Admin Service:
 
 More information on this step is available in the following blog post:
 
-{{< reference title="Event ID 10016, KB 920783, and the WSS_WPG Group" linkHref="/blog/jjameson/2009/10/17/event-id-10016-kb-920783-and-the-wss-wpg-group" linkText="https://www.technologytoolbox.com/blog/jjameson/2009/10/17/event-id-10016-kb-920783-and-the-wss-wpg-group" >}}
+{{< reference title="Event ID 10016, KB 920783, and the WSS_WPG Group" linkHref="/blog/jjameson/2009/10/17/event-id-10016-kb-920783-and-the-wss-wpg-group/" linkText="https://www.techtoolbox.us/blog/jjameson/2009/10/17/event-id-10016-kb-920783-and-the-wss-wpg-group/" >}}
 
 ## Rename TaxonomyPicker.ascx
 
@@ -1341,7 +1341,7 @@ FABRIKAM_BUILD_CONFIGURATION = Debug and FABRIKAM_EXTRANET_URL =
 
 {{< anchor name="Figure_2:_Setting_environment_variables" >}}
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Environment-Variables-Fabrikam-Extranet-394x436.png" alt="Setting environment variables" class="screenshot" height="436" width="394" caption="Figure 2: Setting environment variables" >}}
+{{< figure src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Environment-Variables-Fabrikam-Extranet-394x436.png" alt="Setting environment variables" class="screenshot" height="436" width="394" caption="Figure 2: Setting environment variables" >}}
 
 ## DEV - Snapshot VM
 
@@ -1354,12 +1354,12 @@ available in the following blog posts:
 
 - {{< reference
   title="Virtual Machine Snapshots and SharePoint Development, Part 1"
-  linkHref="/blog/jjameson/2011/03/22/virtual-machine-snapshots-and-sharepoint-development-part-1"
-  linkText="https://www.technologytoolbox.com/blog/jjameson/2011/03/22/virtual-machine-snapshots-and-sharepoint-development-part-1" >}}
+  linkHref="/blog/jjameson/2011/03/22/virtual-machine-snapshots-and-sharepoint-development-part-1/"
+  linkText="https://www.techtoolbox.us/blog/jjameson/2011/03/22/virtual-machine-snapshots-and-sharepoint-development-part-1/" >}}
 - {{< reference
   title="Virtual Machine Snapshots and SharePoint Development, Part 2"
-  linkHref="/blog/jjameson/2011/03/23/virtual-machine-snapshots-and-sharepoint-development-part-2"
-  linkText="https://www.technologytoolbox.com/blog/jjameson/2011/03/23/virtual-machine-snapshots-and-sharepoint-development-part-2" >}}
+  linkHref="/blog/jjameson/2011/03/23/virtual-machine-snapshots-and-sharepoint-development-part-2/"
+  linkText="https://www.techtoolbox.us/blog/jjameson/2011/03/23/virtual-machine-snapshots-and-sharepoint-development-part-2/" >}}
 
 ## Copy Fabrikam Extranet build to SharePoint server
 
@@ -2104,12 +2104,12 @@ The site should resemble the following:
 {{< anchor name="Figure_3:_Default_home_page_for_“Publishing_Portal”_site_in_SharePoint_Server_2010" >}}
 
 {{< figure
-  src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/SharePoint-Server-2010-Publishing-Portal-600x374.png"
+  src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/SharePoint-Server-2010-Publishing-Portal-600x374.png"
   alt="Default home page for “Publishing Portal” site in SharePoint Server 2010"
   class="screenshot" height="374" width="600"
   caption="Figure 3: Default home page for “Publishing Portal” site in SharePoint Server 2010" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/SharePoint-Server-2010-Publishing-Portal-1006x627.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/SharePoint-Server-2010-Publishing-Portal-1006x627.png)
 
 Although the site does not yet have the Fabrikam branding or any custom code
 deployed, it is still possible to validate the basic functionality of the site
@@ -2140,7 +2140,7 @@ To login to the website using Windows authentication:
    >
    > This is discussed in more detail in the following blog post:
    >
-   > {{< reference title="Be \"In the Zone\" to Avoid Entering Credentials" linkHref="/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials" linkText="https://www.technologytoolbox.com/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials" >}}
+   > {{< reference title="Be \"In the Zone\" to Avoid Entering Credentials" linkHref="/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials/" linkText="https://www.techtoolbox.us/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials/" >}}
 
    {{< div-block-end >}}
 
@@ -2160,7 +2160,7 @@ roundtrips for each and every page request on your site.
 
 This is discussed in more detail in the following blog post:
 
-{{< reference title="Always Enable Disk-Based Caching in SharePoint Server 2010" linkHref="/blog/jjameson/2010/11/16/always-enable-disk-based-caching-in-sharepoint-server-2010" linkText="https://www.technologytoolbox.com/blog/jjameson/2010/11/16/always-enable-disk-based-caching-in-sharepoint-server-2010" >}}
+{{< reference title="Always Enable Disk-Based Caching in SharePoint Server 2010" linkHref="/blog/jjameson/2010/11/16/always-enable-disk-based-caching-in-sharepoint-server-2010/" linkText="https://www.techtoolbox.us/blog/jjameson/2010/11/16/always-enable-disk-based-caching-in-sharepoint-server-2010/" >}}
 
 Use the following procedure to configure disk-based cache settings for a Web
 application.
@@ -2729,9 +2729,9 @@ without the **Sample Style Guide** and **Reusable Content Sample** links).
 
 {{< anchor name="Figure_4:_Fabrikam_Extranet_home_page" >}}
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Fabrikam-Extranet-home-page-600x277.png" alt="Fabrikam Extranet home page" class="screenshot" height="277" width="600" caption="Figure 4: Fabrikam Extranet home page" >}}
+{{< figure src="https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/Fabrikam-Extranet-home-page-600x277.png" alt="Fabrikam Extranet home page" class="screenshot" height="277" width="600" caption="Figure 4: Fabrikam Extranet home page" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Fabrikam-Extranet-home-page-1010x467.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/Fabrikam-Extranet-home-page-1010x467.png)
 
 ## Configure sample content (optional)
 

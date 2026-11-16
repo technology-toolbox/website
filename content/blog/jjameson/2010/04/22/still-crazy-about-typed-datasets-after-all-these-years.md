@@ -45,11 +45,11 @@ team members or developers responsible for maintaining the solution).
 For example, consider the typed DataSet shown below.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Typed-DataSet-example-(ScorecardData)-600x330.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Typed-DataSet-example-(ScorecardData)-600x330.png"
 alt="Typed DataSet example (ScorecardData)" height="330" width="600"
 caption="Figure 1: Typed DataSet example (ScorecardData)" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Typed-DataSet-example-%28ScorecardData%29-723x398.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/Typed-DataSet-example-%28ScorecardData%29-723x398.png)
 
 What can you tell just by looking at the diagram? What are the business rules
 that are enforced simply by the structure of the tables, relationships, and

@@ -14,7 +14,7 @@ categories: ["Development", "My System"]
 tags: ["Web Development"]
 ---
 
-In [yesterday's post](../02/building-technologytoolbox-com-part-21.aspx), I
+In [yesterday's post](/blog/jjameson/2012/02/02/building-technologytoolbox-com-part-21/), I
 described how I integrated Google Site Search into the Technology Toolbox
 website. This post provides a similar walkthrough for implementing
 [Google Analytics](http://www.google.com/analytics/).
@@ -251,9 +251,9 @@ That is when it occurred to me that rather than using a single tracking code for
 all environments, I could just as easily use different codes for each
 environment, as illustrated in Figure 1.
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Google-Analytics-Account-Home-600x340.png" alt="Google Analytics (Account Home)" height="340" width="600" caption="Figure 1: Google Analytics (Account Home)" >}}
+{{< figure src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Google-Analytics-Account-Home-600x340.png" alt="Google Analytics (Account Home)" height="340" width="600" caption="Figure 1: Google Analytics (Account Home)" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Google-Analytics-Account-Home-767x435.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/Google-Analytics-Account-Home-767x435.png)
 
 After some refactoring and performance optimization, here is the updated
 implementation of the **AnalyticsScript** class:

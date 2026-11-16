@@ -57,11 +57,11 @@ this morning (again, note that this is not a typical snapshot since I just
 returned from a long vacation).
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Personal/Outlook-folders-and-archive-structure-297x600.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Personal/Outlook-folders-and-archive-structure-297x600.png"
 alt="Outlook folders and archive structure" class="screenshot" height="600"
 width="297" caption="Figure 1: Outlook folders and archive structure" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Personal/Outlook-folders-and-archive-structure-334x675.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Personal/Outlook-folders-and-archive-structure-334x675.png)
 
 As you can see, I received literally thousands of email messages during my
 hiatus, but only 66 of them stayed in my **Inbox** folder.
@@ -211,12 +211,12 @@ Here's my updated screenshot from Outlook this morning after running Thread
 Compressor:
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Personal/Outlook-folders-after-Thread-Compressor-297x600.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Personal/Outlook-folders-after-Thread-Compressor-297x600.png"
 alt="Outlook folders after running Thread Compressor" class="screenshot"
 height="600" width="297"
 caption="Figure 2: Outlook folders after running Thread Compressor" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Personal/Outlook-folders-after-Thread-Compressor-334x675.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Personal/Outlook-folders-after-Thread-Compressor-334x675.png)
 
 Compare the numbers in this screenshot with the corresponding numbers in the
 previous screenshot -- or just trust me when I say it deleted 1,758 messages --

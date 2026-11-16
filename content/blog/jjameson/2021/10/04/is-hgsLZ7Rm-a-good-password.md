@@ -14,11 +14,11 @@ This morning, I woke up to find the following "delightful" e-mail from Google in
 my inbox:
 
 {{< figure
-  src="https://assets.technologytoolbox.com/screenshots/66/45EA6D5A31ADAE93C914117C826D91FA20115F66.png"
+  src="https://assets.techtoolbox.us/screenshots/66/45EA6D5A31ADAE93C914117C826D91FA20115F66.png"
   class="screenshot" height="862" width="628"
   caption="Figure 1: E-mail notification for password found in data breach" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/screenshots/66/45EA6D5A31ADAE93C914117C826D91FA20115F66.png)
+[See full-sized image.](https://assets.techtoolbox.us/screenshots/66/45EA6D5A31ADAE93C914117C826D91FA20115F66.png)
 
 Apparently a randomly generated password I was using (for the past two years on
 a website I access somewhat regularly) was found in a recent data breach. The

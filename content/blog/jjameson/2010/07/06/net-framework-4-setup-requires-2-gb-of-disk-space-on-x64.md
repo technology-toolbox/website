@@ -48,7 +48,7 @@ quicker and easier to try installing it using the
 Shortly after starting the setup, I observed the following:
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Microsoft-.NET-Framework-4-Setup-Requirements-503x470.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Infrastructure/Microsoft-.NET-Framework-4-Setup-Requirements-503x470.png"
 alt="Microsoft .NET Framework 4 Setup - disk space requirements"
 class="screenshot" height="470" width="503"
 caption="Figure 1: Microsoft .NET Framework 4 Setup - disk space requirements" >}}

@@ -25,11 +25,11 @@ site in greater detail.
 The following screenshot shows the current home page for Technology Toolbox.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-538x600.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Home-538x600.png"
 alt="Technology Toolbox home page" class="screenshot" height="600" width="538"
 caption="Figure 1: Technology Toolbox home page" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-1058x1179.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Home-1058x1179.png)
 
 As I detailed in a
 [previous post](/blog/jjameson/2009/06/26/creating-wireframes-for-page-layouts),
@@ -45,11 +45,11 @@ ready to serve as a reference for the visual design).
 Here is the corresponding page layout for the site home page.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-(Page-Layout)-536x600.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Home-(Page-Layout)-536x600.png"
 alt="Technology Toolbox home page (page layout)" class="screenshot" height="600"
 width="536" caption="Figure 2: Technology Toolbox home page (page layout)" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-%28Page-Layout%29-1058x1185.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Home-%28Page-Layout%29-1058x1185.png)
 
 #### Branding
 
@@ -127,11 +127,11 @@ a related illustration (typically obtained from
 [iStockphoto](http://www.istockphoto.com) -- my image provider of choice).
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Services-600x494.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Services-600x494.png"
 alt="Services page" class="screenshot" height="494" width="600"
 caption="Figure 3: Services page" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Services-1058x871.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Services-1058x871.png)
 
 Note that I still like to use the [960 Grid System](http://960.gs) to layout Web
 content -- something I first discussed in a blog post about
@@ -141,11 +141,11 @@ secondary content spans the remaining 5 columns (since I chose the 12 column
 layout option).
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Services-with-Grid-600x495.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Services-with-Grid-600x495.png"
 alt="Services page (with grid)" class="screenshot" height="495" width="600"
 caption="Figure 4: Services page (with grid)" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Services-with-Grid-1058x872.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Services-with-Grid-1058x872.png)
 
 In order to minimize the amount of CSS for the site, I chose to extract only
 those rules from the 960 Grid System that are currently being used and
@@ -167,22 +167,22 @@ The site provides an online form prospective clients can use regarding potential
 projects and other contact requests, as shown in Figure 5.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Contact-592x600.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Contact-592x600.png"
 alt="Contact form" class="screenshot" height="600" width="592"
 caption="Figure 5: Contact form" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Contact-1058x1072.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Contact-1058x1072.png)
 
 As shown below, validators are used to ensure the required fields are specified
 when submitting the form. Also note how required fields have a light yellow
 background color (that changes to white when the field has the focus).
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Contact-validation-505x600.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Contact-validation-505x600.png"
 alt="Contact form validation errors" class="screenshot" height="600" width="505"
 caption="Figure 6: Contact form validation errors" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Contact-validation-1058x1258.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Contact-validation-1058x1258.png)
 
 To ensure responses are generated by a person -- rather than annoying spam
 submitted by some worthless "bot" -- the form includes a CAPTCHA control that
@@ -198,11 +198,11 @@ control, an error appears in the validation summary, similar to when required
 fields are missing.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Contact-CAPTCHA-534x600.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Contact-CAPTCHA-534x600.png"
 alt="Contact form CAPTCHA validation error" class="screenshot" height="600"
 width="534" caption="Figure 7: Contact form CAPTCHA validation error" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Contact-CAPTCHA-1058x1189.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Contact-CAPTCHA-1058x1189.png)
 
 While the simple image-recognition CAPTCHA is arguably not as "strong" as a
 distorted text CAPTCHA (depending, of course, on how much you choose to distort
@@ -223,11 +223,11 @@ blog pages in the desired structure and format (for example, to show the
 lists of links grouped by year).
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-374x600.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-374x600.png"
 alt="Blog home page" class="screenshot" height="600" width="374"
 caption="Figure 8: Blog home page" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-1058x1699.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-1058x1699.png)
 
 The primary content on the blog home page is, not surprisingly, the most recent
 list of posts (sorted in descending order). The secondary content provides links
@@ -244,11 +244,11 @@ should try to "hook" them into reading other posts during the same visit. [The
 redundant with the items shown in the primary content area on that page.]
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Post-398x600.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Post-398x600.png"
 alt="Sample blog post" class="screenshot" height="600" width="398"
 caption="Figure 9: Sample blog post" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Post-1058x1595.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Post-1058x1595.png)
 
 Note that the form for adding a comment to a blog post uses the same custom
 CAPTCHA control described previously for the **Contact** form. Getting this to
@@ -297,11 +297,11 @@ in IIS. It contains the Subtext solution and a few updated/additional files from
 the "Caelum" solution -- such as the site map file and the custom blog skin.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Solution-Architecture-600x520.jpg"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Solution-Architecture-600x520.jpg"
 alt="Solution architecture" height="520" width="600"
 caption="Figure 10: Solution architecture" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Solution-Architecture-726x629.jpg)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Solution-Architecture-726x629.jpg)
 
 ### Physical Architecture
 
@@ -310,11 +310,11 @@ The production environment for TechnologyToolbox.com is currently hosted by
 servers are used for database services (i.e. SQL Server) and the Web tier.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Technology-Toolbox-Infrastructure-600x399.jpg"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Infrastructure/Technology-Toolbox-Infrastructure-600x399.jpg"
 alt="Infrastructure" height="399" width="600"
 caption="Figure 11: Infrastructure" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Technology-Toolbox-Infrastructure-1019x677.jpg)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Infrastructure/Technology-Toolbox-Infrastructure-1019x677.jpg)
 
 In addition to Production, separate Development and Test environments are used
 to validate releases before deploying to the "live" environment. DEV is

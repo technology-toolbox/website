@@ -21,7 +21,7 @@ Regardless of whether you are creating custom applications using the core .NET
 Framework or deploying solutions based on SharePoint to rapidly address changing
 business needs, you need a solid foundation for continuously managing all
 aspects of the development lifecycle.
-[Read more](/services/application-lifecycle-management)
+[Read more](/services/application-lifecycle-management/)
 
 ## SharePoint Architecture and Development
 
@@ -33,7 +33,7 @@ given.
 Technology Toolbox helps you plan, customize, and deploy SharePoint 2010 to
 address your specific needs, whether you are upgrading from a previous version
 or migrating from another platform.
-[Read more](/services/sharepoint-architecture-and-development)
+[Read more](/services/sharepoint-architecture-and-development/)
 
 ## Databases and Business Intelligence
 
@@ -48,4 +48,4 @@ In most businesses today, operational systems have been in place for many years
 and hold vast amounts of data. However, truly useful information remains elusive
 or cumbersome to gather and analyze. We can help you connect people to
 information in a secure, self-service fashion that minimizes cost and IT
-management issues. [Read more](/services/databases-and-business-intelligence)
+management issues. [Read more](/services/databases-and-business-intelligence/)

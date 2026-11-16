@@ -142,11 +142,11 @@ As a quick review, the following screenshot shows the snapshots for my primary
 SharePoint Server 2010 development VM (FOOBAR5):
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/FOOBAR5-Snapshots-600x383.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/FOOBAR5-Snapshots-600x383.png"
 alt="FOOBAR5 snapshots" class="screenshot" height="383" width="600"
 caption="Figure 1: FOOBAR5 snapshots" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/FOOBAR5-Snapshots-1056x674.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/FOOBAR5-Snapshots-1056x674.png)
 
 For the sake of explaining more about these snapshots, I'll relabel them again
 in this post as follows:
@@ -246,11 +246,11 @@ To understand this process, examine the snapshots shown below for one of my
 Microsoft Office SharePoint Server 2007 development VMs (FOOBAR2):
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/FOOBAR2-Snapshots-600x372.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/FOOBAR2-Snapshots-600x372.png"
 alt="FOOBAR2 snapshots" class="screenshot" height="372" width="600"
 caption="Figure 2: FOOBAR2 snapshots" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/FOOBAR2-Snapshots-1051x652.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/FOOBAR2-Snapshots-1051x652.png)
 
 On my current project, we are working on Sprint-12 which includes some
 enhancements to the "Client Portal". The previous release of the solution was
