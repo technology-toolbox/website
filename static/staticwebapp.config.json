@@ -25,7 +25,7 @@
     {
       "route": "/search/*",
       "headers": {
-        "Content-Security-Policy": "default-src 'self'; connect-src 'self' https://cdnjs.cloudflare.com  https://www.googletagmanager.com https://*.google-analytics.com https://*.google.com; frame-src https://cse.google.com; img-src 'self' data: clients1.google.com https://cse.google.com https://www.google.com https://www.googleapis.com https://www.google-analytics.com; script-src 'self' 'unsafe-eval' data: https://cdnjs.cloudflare.com cse.google.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://commento.techtoolbox.us https://static.cloudflareinsights.com https://www.google.com;"
+        "Content-Security-Policy": "default-src 'self'; connect-src 'self' https://cdnjs.cloudflare.com https://*.adtrafficquality.google https://www.googletagmanager.com https://*.google-analytics.com https://*.google.com; frame-src https://*.adtrafficquality.google https://syndicatedsearch.goog/; img-src 'self' data: clients1.google.com https://*.gstatic.com https://*.adtrafficquality.google  https://cse.google.com https://www.google.com https://www.googleapis.com https://www.google-analytics.com https://www.googletagmanager.com; script-src 'self' 'unsafe-eval' data: https://cdnjs.cloudflare.com https://static.cloudflareinsights.com cse.google.com https://www.google.com https://*.adtrafficquality.google https://partner.googleadservices.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://commento.techtoolbox.us https://static.cloudflareinsights.com https://www.google.com;"
       }
     }
   ]
