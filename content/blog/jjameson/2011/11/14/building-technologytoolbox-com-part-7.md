@@ -53,11 +53,11 @@ The Production environment for TechnologyToolbox.com is currently hosted by
 servers are used for database services (i.e. SQL Server) and the Web tier.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Technology-Toolbox-Infrastructure-600x399.jpg"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Infrastructure/Technology-Toolbox-Infrastructure-600x399.jpg"
 alt="Infrastructure" height="399" width="600"
 caption="Figure 1: Infrastructure" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Technology-Toolbox-Infrastructure-1019x677.jpg)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Infrastructure/Technology-Toolbox-Infrastructure-1019x677.jpg)
 
 While I generally prefer to use Windows Authentication with SQL Server -- for
 reasons I described in

@@ -33,11 +33,11 @@ feedback in hopes that Dell might update the content to address the issues.
 That's when I encountered the following:
 
 {{< figure
-  src="https://assets.technologytoolbox.com/screenshots/36/FEEE6EA2FF806EC92F72D216E76799AAD8C2F336.png"
+  src="https://assets.techtoolbox.us/screenshots/36/FEEE6EA2FF806EC92F72D216E76799AAD8C2F336.png"
   class="screenshot" height="793" width="1266"
   caption="Figure 1: Error submitting feedback on Dell website" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/screenshots/36/FEEE6EA2FF806EC92F72D216E76799AAD8C2F336.png)
+[See full-sized image.](https://assets.techtoolbox.us/screenshots/36/FEEE6EA2FF806EC92F72D216E76799AAD8C2F336.png)
 
 As you can see, the feedback feature on the Dell website does not accept
 comments with "special characters: `<>()\`" -- which blocked me from submitting
@@ -73,5 +73,5 @@ backslashes in content submitted via the web...well, then maybe you shouldn't
 consider yourself a _qualified_ web developer.
 
 Dell, please "enhance" your feedback system to fix this issue -- or
-[hire a consultant who can easily do this for you](https://www.technologytoolbox.com/)
+[hire a consultant who can easily do this for you](https://www.techtoolbox.us/)
 ;-)

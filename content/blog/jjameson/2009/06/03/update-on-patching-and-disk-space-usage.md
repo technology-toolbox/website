@@ -50,12 +50,12 @@ Here is a baseline of the disk space usage on a Windows Server 2008 Standard x64
 VM:
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-usage-Windows-Server-2008-(baseline)-600x450.jpg"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Infrastructure/Disk-usage-Windows-Server-2008-(baseline)-600x450.jpg"
 alt="Disk usage on Windows Server 2008 Standard x64 VM (baseline)"
 class="screenshot" height="450" width="600"
 caption="Figure 1: Disk usage on Windows Server 2008 Standard x64 VM (baseline)" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-usage-Windows-Server-2008-%28baseline%29-800x600.jpg)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Infrastructure/Disk-usage-Windows-Server-2008-%28baseline%29-800x600.jpg)
 
 Notice that the total disk usage is about 7.5 GB and the Windows folder consumes
 a little over 7 GB. Also note that Windows Server 2008 included SP1 (i.e.
@@ -65,12 +65,12 @@ servicing model for both Windows Server 2008 and Windows Vista).
 I then immediately installed Windows Server 2008 SP2 and captured the following:
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Usage-ws2008std-x64-SP2-600x431.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Infrastructure/Disk-Usage-ws2008std-x64-SP2-600x431.png"
 alt="Disk usage on Windows Server 2008 x64 VM (after installing SP2)"
 class="screenshot" height="431" width="600"
 caption="Figure 2: Disk usage on Windows Server 2008 x64 VM (after installing SP2)" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Usage-ws2008std-x64-SP2-801x576.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Infrastructure/Disk-Usage-ws2008std-x64-SP2-801x576.png)
 
 Observe that the Windows folder now consumes a little over 10 GB of storage.
 Ouch...3 GB for a service pack. That seems a little, um, _irritating_ -- for
@@ -82,12 +82,12 @@ I then ran the Windows Component Clean tool (COMPCLN.exe) as described in my
 which reclaimed approximately 900 MB of space.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Usage-WS2008-x64-(WS2008-SP2-compcln)-600x429.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Infrastructure/Disk-Usage-WS2008-x64-(WS2008-SP2-compcln)-600x429.png"
 alt="Disk usage on Windows Server 2008 x64 VM (after installing SP2 and running COMPCLN.exe)"
 class="screenshot" height="429" width="600"
 caption="Figure 3: Disk usage on Windows Server 2008 x64 VM (after installing SP2 and running COMPCLN.exe)" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Usage-WS2008-x64-%28WS2008-SP2-compcln%29-801x573.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Infrastructure/Disk-Usage-WS2008-x64-%28WS2008-SP2-compcln%29-801x573.png)
 
 Notice that the Windows folder now consumes about 8.5 GB of space (but the
 overall free space on the 20 GB VHD increased from roughly 9.7 GB to 10.6 GB).
@@ -107,12 +107,12 @@ course).
 Unfortunately, it isn't even close, as shown in the following figure.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Usage-COLOSSUS-(after-WS2008-SP2-install)-600x454.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Infrastructure/Disk-Usage-COLOSSUS-(after-WS2008-SP2-install)-600x454.png"
 alt="Disk usage on a patched WSUS server (after installing SP2)" height="454"
 width="600"
 caption="Figure 4: Disk usage on a patched WSUS server (after installing SP2)" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Usage-COLOSSUS-%28after-WS2008-SP2-install%29-758x574.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Infrastructure/Disk-Usage-COLOSSUS-%28after-WS2008-SP2-install%29-758x574.png)
 
 Notice that the Windows folder on COLOSSUS consumes almost 16.5 GB of space, of
 which roughly 10.5 GB is used by the WinSxS folder.

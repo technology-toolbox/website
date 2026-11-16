@@ -125,11 +125,11 @@ I can then schedule full, differential, and transaction log backups using
 scheduled tasks, as shown below.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/My-System/Scheduled-Tasks-COLOSSUS-600x119.jpg"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/My-System/Scheduled-Tasks-COLOSSUS-600x119.jpg"
 alt="Scheduled tasks for backing up databases" height="119" width="600"
 caption="Figure 1: Scheduled tasks for backing up databases" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/My-System/Scheduled-Tasks-COLOSSUS-1131x224.jpg)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/My-System/Scheduled-Tasks-COLOSSUS-1131x224.jpg)
 
 Here is the command behind one of the scheduled tasks (you can easily deduce the
 others):

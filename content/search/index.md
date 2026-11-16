@@ -1,7 +1,8 @@
 ---
 title: "Search"
-date: 2021-04-06T09:38:32-06:00
+date: 2026-11-16T12:05:01-07:00
 ---
 
-<script async src="https://cse.google.com/cse.js?cx=005042176703738775616:sqv29_g_cee"></script>
+<script async src="https://cse.google.com/cse.js?cx=f0d9c0b0217d64bcc">
+</script>
 <div class="gcse-search"></div>

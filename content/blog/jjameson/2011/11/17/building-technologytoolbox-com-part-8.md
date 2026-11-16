@@ -29,11 +29,11 @@ This shows how the Caelum and Subtext Visual Studio solutions are merged
 together during the deployment process.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Solution-Architecture-600x520.jpg"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Solution-Architecture-600x520.jpg"
 alt="Solution architecture" height="520" width="600"
 caption="Figure 1: Solution architecture" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Solution-Architecture-726x629.jpg)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Solution-Architecture-726x629.jpg)
 
 ### Step 1 - Set CAELUM_URL environment variable
 
@@ -216,8 +216,8 @@ For more details on the build process, refer to one of my posts from a couple of
 years ago:
 
 {{< reference title="Build and Deployment Overview"
-linkHref="/blog/jjameson/2009/09/26/build-and-deployment-overview"
-linkText="https://www.technologytoolbox.com/blog/jjameson/2009/09/26/build-and-deployment-overview" >}}
+linkHref="/blog/jjameson/2009/09/26/build-and-deployment-overview/"
+linkText="https://www.techtoolbox.us/blog/jjameson/2009/09/26/build-and-deployment-overview/" >}}
 
 ### Step 7 - Configure permissions on Subtext App_Data folder
 
@@ -471,11 +471,11 @@ to DEV on a daily basis (or more frequently depending on where you are in the
 release cycle).
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/3-Automated-build-and-deployment-600x343.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/3-Automated-build-and-deployment-600x343.png"
 alt="Automated build and deployment" height="343" width="600"
 caption="Figure 2: Automated build and deployment" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/3-Automated-build-and-deployment-926x530.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/3-Automated-build-and-deployment-926x530.png)
 
 While you could use the new "Lab Management" features in Visual Studio 2010 to
 perform the deployments, for years I've simply been using scheduled tasks to
@@ -499,11 +499,11 @@ deployments to the Test environment occur much less often -- for example, when a
 beta version of the solution is ready.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/4-Installing-the-Beta-1-version-to-TEST-600x343.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/4-Installing-the-Beta-1-version-to-TEST-600x343.png"
 alt="\"Manual\" deployment to TEST" height="343" width="600"
 caption="Figure 4: \"Manual\" deployment to TEST" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/4-Installing-the-Beta-1-version-to-TEST-940x538.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/4-Installing-the-Beta-1-version-to-TEST-940x538.png)
 
 The reason I put the quotes around "manual" is because most of the deployment is
 scripted. The only thing that needs to be done is to open a PowerShell window

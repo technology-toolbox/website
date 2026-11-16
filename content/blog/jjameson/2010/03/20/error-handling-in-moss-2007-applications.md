@@ -35,11 +35,11 @@ To understand why, consider a publishing site configured with
 **BlueBand.master** as the master page:
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Publishing-Site-BlueBand-Master-Page-600x353.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/Publishing-Site-BlueBand-Master-Page-600x353.png"
 alt="Publishing site with BlueBand master page" class="screenshot" height="353"
 width="600" caption="Figure 1: Publishing site with BlueBand master page" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Publishing-Site-BlueBand-Master-Page-1007x593.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/Publishing-Site-BlueBand-Master-Page-1007x593.png)
 
 Now, similar to the example error demonstrated in my previous post, let's add a
 Web Part to the home page that throws an exception:
@@ -104,11 +104,11 @@ As shown in the following screenshot, browsing to the home page now displays the
 SharePoint error page.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/SharePoint-Error-Page-600x366.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/SharePoint-Error-Page-600x366.png"
 alt="SharePoint error page" class="screenshot" height="366" width="600"
 caption="Figure 2: SharePoint error page" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/SharePoint-Error-Page-1024x624.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/SharePoint-Error-Page-1024x624.png)
 
 If this were an intranet site and we were using the OOTB **default.master**
 (instead of **BlueBand.master**) then the out-of-the-box SharePoint error page
@@ -156,11 +156,11 @@ The following screenshot shows a custom error page fashioned after
 BlueBand.master:
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Custom-Error-Page-600x162.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/Custom-Error-Page-600x162.png"
 alt="Custom SharePoint error page" class="screenshot" height="162" width="600"
 caption="Figure 3: Custom SharePoint error page" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Custom-Error-Page-1024x276.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/Custom-Error-Page-1024x276.png)
 
 Notice how the details of the error are not displayed to users (which probably
 wouldn't be of much help to them anyway and, more importantly, might divulge

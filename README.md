@@ -1,9 +1,9 @@
 # Technology Toolbox website
 
 This repository contains the Technology Toolbox website:
-[https://www.technologytoolbox.com](https://www.technologytoolbox.com).
+[https://www.techtoolbox.us](https://www.techtoolbox.us).
 
-![Technology Toolbox responsive website](https://assets.technologytoolbox.com/website/img/theme-screenshots/responsive-website-2300x1400.jpg)
+![Technology Toolbox responsive website](https://assets.techtoolbox.us/website/img/theme-screenshots/responsive-website-2300x1400.jpg)
 
 ## Features
 
@@ -40,7 +40,7 @@ This repository contains the Technology Toolbox website:
    ```Shell
    cd website
 
-   git submodule add https://github.com/technology-toolbox/techtoolbox-hugo themes/techtoolbox-hugo
+   git submodule update --init themes/techtoolbox-hugo
    ```
 
 1. Install NPM dependencies:

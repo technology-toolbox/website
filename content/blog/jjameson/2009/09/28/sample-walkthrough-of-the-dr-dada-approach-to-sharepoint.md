@@ -23,7 +23,7 @@ msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/09/28/sample-walkthr
 > Team Foundation Build. Refer to the following post for the updated DDF file
 > and corresponding modifications to the project file:
 >
-> {{< reference title="Building SharePoint WSPs with Team Foundation Build" linkHref="/blog/jjameson/2009/11/18/building-sharepoint-wsps-with-team-foundation-build" linkText="https://www.technologytoolbox.com/blog/jjameson/2009/11/18/building-sharepoint-wsps-with-team-foundation-build" >}}
+> {{< reference title="Building SharePoint WSPs with Team Foundation Build" linkHref="/blog/jjameson/2009/11/18/building-sharepoint-wsps-with-team-foundation-build/" linkText="https://www.techtoolbox.us/blog/jjameson/2009/11/18/building-sharepoint-wsps-with-team-foundation-build/" >}}
 
 {{< div-block-end >}}
 
@@ -105,7 +105,7 @@ then you know my first step is to build out a "shell" that looks like the
 following:
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/DR.DADA-1-355x178.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/DR.DADA-1-355x178.png"
 alt="Visual Studio solution before adding SharePoint features"
 class="screenshot" height="178" width="355"
 caption="Figure 1: Visual Studio solution before adding SharePoint features" >}}
@@ -158,12 +158,12 @@ scripts to deploy the solution -- into the **DeploymentFiles** folder.
 After that's all done, the Visual Studio solution looks like the following:
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/DR.DADA-2-183x600.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/DR.DADA-2-183x600.png"
 alt="Visual Studio solution after adding SharePoint features and deployment files"
 class="screenshot" height="600" width="183"
 caption="Figure 2: Visual Studio solution after adding SharePoint features and deployment files" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/DR.DADA-2-325x1066.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/DR.DADA-2-325x1066.png)
 
 ### Files for Creating SharePoint Web Solution Package (WSP)
 
@@ -871,8 +871,8 @@ using the "up arrow" to repeat a command, selecting one after using F7 won't
 re-add it to the command history.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/DR.DADA-3-600x205.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/DR.DADA-3-600x205.png"
 alt="Command history" class="screenshot" height="205" width="600"
 caption="Figure 3: Command history" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/DR.DADA-3-996x341.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/DR.DADA-3-996x341.png)

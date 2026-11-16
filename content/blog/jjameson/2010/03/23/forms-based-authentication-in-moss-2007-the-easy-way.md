@@ -164,7 +164,7 @@ the deployment scripts default to Release builds, Doug needs to set the
 {{< /div-block >}}
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Environment-Variables-394x436.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/Environment-Variables-394x436.png"
 alt="Setting environment variables" height="436" width="394"
 caption="Figure 1: Setting environment variables" >}}
 

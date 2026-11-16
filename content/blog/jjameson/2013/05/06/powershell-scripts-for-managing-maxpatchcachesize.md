@@ -74,7 +74,7 @@ application.
 http://msdn.microsoft.com/en-us/library/windows/desktop/aa369798.aspx
 
 .LINK
-https://www.technologytoolbox.com/blog/jjameson/archive/2010/04/30/save-significant-disk-space-by-setting-maxpatchcachesize-to-0.aspx
+https://www.techtoolbox.us/blog/jjameson/archive/2010/04/30/save-significant-disk-space-by-setting-maxpatchcachesize-to-0.aspx
 
 .EXAMPLE
 .\Get-MaxPatchCacheSize.ps1
@@ -116,7 +116,7 @@ files.
 http://msdn.microsoft.com/en-us/library/windows/desktop/aa369798.aspx
 
 .LINK
-https://www.technologytoolbox.com/blog/jjameson/archive/2010/04/30/save-significant-disk-space-by-setting-maxpatchcachesize-to-0.aspx
+https://www.techtoolbox.us/blog/jjameson/archive/2010/04/30/save-significant-disk-space-by-setting-maxpatchcachesize-to-0.aspx
 
 .EXAMPLE
 .\Set-MaxPatchCacheSize.ps1 0

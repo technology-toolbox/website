@@ -96,11 +96,11 @@ Here's a chart showing the combined views for each blog post that I've created
 so far.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Personal/MSDN-blog-Combined-Views-600x266.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Personal/MSDN-blog-Combined-Views-600x266.png"
 alt="Combined views for each blog post" height="266" width="600"
 caption="Figure 1: Combined views for each blog post" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Personal/MSDN-blog-Combined-Views-1136x503.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Personal/MSDN-blog-Combined-Views-1136x503.png)
 
 I didn't show the labels (i.e. blog post titles) on the X-axis for obvious
 reasons. I find it interesting how some blog posts are really "hot" in
@@ -162,11 +162,11 @@ authoring of blog posts has varied over time.
 Let's start with the total number of posts by year:
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Personal/MSDN-blog-Total-Posts-by-Year-600x311.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Personal/MSDN-blog-Total-Posts-by-Year-600x311.png"
 alt="Blog posts created by year" height="311" width="600"
 caption="Figure 2: Blog posts created by year" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Personal/MSDN-blog-Total-Posts-by-Year-699x362.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Personal/MSDN-blog-Total-Posts-by-Year-699x362.png)
 
 Hmmm...apparently 2008 wasn't a very good year for me from a blogging
 perspective. Fortunately, the number for 2009 is much better -- and we still
@@ -175,11 +175,11 @@ have almost two months to go!
 Let's look at the total number of posts by month:
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Personal/MSDN-blog-Total-Posts-by-Month-600x330.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Personal/MSDN-blog-Total-Posts-by-Month-600x330.png"
 alt="Blog posts created by month" height="330" width="600"
 caption="Figure 3: Blog posts created by month" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Personal/MSDN-blog-Total-Posts-by-Month-699x384.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Personal/MSDN-blog-Total-Posts-by-Month-699x384.png)
 
 Well, that certainly is, um..._erratic_. Oh, and where is December?!
 
@@ -245,12 +245,12 @@ To help me get a better feel for the Google vs. Microsoft ratio, I grouped the
 results into categories and subcategories.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Personal/MSDN-blog-Referrals-by-Category-600x387.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Personal/MSDN-blog-Referrals-by-Category-600x387.png"
 alt="Referrals by category for post - Issues Deploying SharePoint Solution Packages"
 height="387" width="600"
 caption="Figure 4: Referrals by category for post - Issues Deploying SharePoint Solution Packages" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Personal/MSDN-blog-Referrals-by-Category-689x444.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Personal/MSDN-blog-Referrals-by-Category-689x444.png)
 
 It turns out that the subcategories were really only interesting for the
 purposes of identifying the top-level categories.

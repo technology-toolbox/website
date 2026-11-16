@@ -160,11 +160,11 @@ However, if we start
 before running the program, then we can easily view all of the log messages.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/DebugView-600x190.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/DebugView-600x190.png"
 alt="DebugView (a.k.a. Dbgview.exe)" height="190" width="600"
 caption="Figure 1: DebugView (a.k.a. Dbgview.exe)" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/DebugView-946x300.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/DebugView-946x300.png)
 
 To show the log messages in the console, we simply need to configure a listener.
 For a console application, this is done using the application configuration file

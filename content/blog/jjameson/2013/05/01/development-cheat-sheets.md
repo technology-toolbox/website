@@ -25,12 +25,12 @@ The following figure shows an example cheat sheet for the Main branch of my
 Fabrikam Demo solution.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/My-System/Development-cheat-sheet-Fabrikam-Demo-Main-branch-600x393.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/My-System/Development-cheat-sheet-Fabrikam-Demo-Main-branch-600x393.png"
 alt="Development cheat sheet - Fabrikam Demo - Main branch" class="screenshot"
 height="393" width="600"
 caption="Figure 1: Development \"cheat sheet\" - Fabrikam Demo - Main branch" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/My-System/Development-cheat-sheet-Fabrikam-Demo-Main-branch-1098x719.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/My-System/Development-cheat-sheet-Fabrikam-Demo-Main-branch-1098x719.png)
 
 Essentially all I need to do after starting one of my SharePoint development VMs
 is:
@@ -119,12 +119,12 @@ included in
 [yesterday's post](/blog/jjameson/2013/04/30/installation-guide-for-sharepoint-server-2010-and-office-web-apps).
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/My-System/Development-cheat-sheet-Fabrikam-Demo-SharePointExtranet-branch-600x524.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/My-System/Development-cheat-sheet-Fabrikam-Demo-SharePointExtranet-branch-600x524.png"
 alt="Development cheat sheet - Fabrikam Demo - SharePointExtranet branch"
 class="screenshot" height="524" width="600"
 caption="Figure 2: Development \"cheat sheet\" - Fabrikam Demo - SharePointExtranet branch" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/My-System/Development-cheat-sheet-Fabrikam-Demo-SharePointExtranet-branch-1190x1040.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/My-System/Development-cheat-sheet-Fabrikam-Demo-SharePointExtranet-branch-1190x1040.png)
 
 The commands at the beginning are similar to the ones for the **Main** branch
 (with the exception of the path for the TFS workspace and the URL of the Web
@@ -150,9 +150,9 @@ it is necessary to restart the SharePoint Timer service after redeploying (or
 upgrading) the ELN solutions (WSPs).
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/My-System/Development-cheat-sheet-Dow-ELN-Main-branch-600x461.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/My-System/Development-cheat-sheet-Dow-ELN-Main-branch-600x461.png"
 alt="Development cheat sheet - Dow ELN - Main branch" class="screenshot"
 height="461" width="600"
 caption="Figure 3: Development \"cheat sheet\" - Dow ELN - Main branch" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/My-System/Development-cheat-sheet-Dow-ELN-Main-branch-1328x1021.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/My-System/Development-cheat-sheet-Dow-ELN-Main-branch-1328x1021.png)

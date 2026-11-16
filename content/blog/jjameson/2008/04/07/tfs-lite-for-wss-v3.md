@@ -133,11 +133,11 @@ Here is a step-by-step guide for creating the TFS Lite site template for WSS v3:
 1. In the **Links** list, add a link to the **Project Summary** page.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/TFS-Lite-WSS-v3-600x363.jpg"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/TFS-Lite-WSS-v3-600x363.jpg"
 alt="Project Summary \"dashboard\"" class="screenshot" height="363" width="600"
 caption="Figure 1: Project Summary \"dashboard\"" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/TFS-Lite-WSS-v3-991x599.jpg)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/TFS-Lite-WSS-v3-991x599.jpg)
 
 You might be wondering why I chose to base the Work Items list on Tasks instead
 of just creating a custom list from scratch. Aside from the fact that the Tasks

@@ -22,11 +22,11 @@ Take a look at the screenshot below -- which illustrates the memory usage on the
 Technology Toolbox DPM server:
 
 {{< figure
-  src="https://assets.technologytoolbox.com/screenshots/80/073325A403A2A17B98EED04755E5703A7A32B580.png"
+  src="https://assets.techtoolbox.us/screenshots/80/073325A403A2A17B98EED04755E5703A7A32B580.png"
   class="screenshot" height="863" width="1718"
   caption="Figure 1: Memory utilization on DPM server (September 2021)" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/screenshots/80/073325A403A2A17B98EED04755E5703A7A32B580.png)
+[See full-sized image.](https://assets.techtoolbox.us/screenshots/80/073325A403A2A17B98EED04755E5703A7A32B580.png)
 
 Note that I captured this screenshot back in September of last year (when I
 spent some time investigating the issue and trying to improve the situation). It
@@ -36,11 +36,11 @@ Here's the corresponding screenshot I just captured from System Center
 Operations Manager:
 
 {{< figure
-  src="https://assets.technologytoolbox.com/screenshots/7A/7BBA8A73266F64691CCF7C994DD66913BE206F7A.png"
+  src="https://assets.techtoolbox.us/screenshots/7A/7BBA8A73266F64691CCF7C994DD66913BE206F7A.png"
   class="screenshot" height="863" width="1720"
   caption="Figure 2: Memory utilization on DPM server (January 2022)" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/screenshots/7A/7BBA8A73266F64691CCF7C994DD66913BE206F7A.png)
+[See full-sized image.](https://assets.techtoolbox.us/screenshots/7A/7BBA8A73266F64691CCF7C994DD66913BE206F7A.png)
 
 While there are some noticeable differences in the memory utilization over a
 typical day (specifically, the "sawtooth" pattern throughout the day), the

@@ -104,11 +104,11 @@ control. Once this was done, the TFS integration features of Expression Web 3
 simply just worked, as shown below:
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Expression-Web-My-MSDN-Blog-600x499.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Expression-Web-My-MSDN-Blog-600x499.png"
 alt="Expression Web - my MSDN blog" height="499" width="600"
 caption="Figure 1: Expression Web - my MSDN blog" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Expression-Web-My-MSDN-Blog-1251x1040.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/Expression-Web-My-MSDN-Blog-1251x1040.png)
 
 Notice how items that are checked into source control have a lock icon and new
 items that are pending have a "plus" icon next to them. In other words, the
